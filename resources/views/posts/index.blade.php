@@ -40,7 +40,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Post by</th>
                     <th scope="col">Created At</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col text-center">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
