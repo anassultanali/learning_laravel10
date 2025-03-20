@@ -18,4 +18,11 @@ class PostController extends Controller
 
         return view('posts.index' , ['posts' => $allPosts]);
     }
+    function show($postId) {
+
+        $singlepost = ['id' => 1 ,'postBy' => 'Anas Sultan','email'=>'ansasultan@gmail.com',
+                       'title' => 'php' ,'description' => 'Stay Safe' ,'content' => 'hello' ,  'createdAt' => '2025-3-18'];
+
+        return view('posts.show' , ['post' => $singlepost]);
+    }
 }
