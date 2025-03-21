@@ -57,4 +57,10 @@ class PostController extends Controller
 
         return to_route('posts.show' , $postBy);
     }
+
+    //Delete Method
+
+    function destroy() {
+        return "Stay Safe";
+    }
 }
