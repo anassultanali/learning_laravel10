@@ -25,4 +25,20 @@ class PostController extends Controller
 
         return view('posts.show' , ['post' => $singlepost]);
     }
+
+
+    // Create and Store Methods--------
+    function create() {
+        
+        
+        return view('posts.create');
+    }
+    
+    function store() {
+        //step 1 -----> get data 
+        $data = request()->all() ;
+
+
+        return to_route('posts.index'); //step 3 ---> Redirct to posts.index
+    }
 }
