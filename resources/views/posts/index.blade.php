@@ -12,7 +12,7 @@ Index
 
 <div class="mt-5">
           <div class="text-center">
-              <button type="button" class="btn btn-success">Create Post</button>
+              <a class="btn btn-success" href="{{route('posts.create')}}">Create Post</a>
   
           </div>
   
