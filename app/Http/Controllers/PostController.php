@@ -12,10 +12,16 @@ class PostController extends Controller
 
         return view('posts.index' , ['posts' => $postsFromDB]);
     }
-    function show($postId) {
-        $singlepostFromDB = Post::find($postId);
+    function show(Post $post) {
+        // $singlepostFromDB = Post::find($postId);
+
+
+        // if(is_null($singlepostFromDB)){
+        //     to_route('posts.index');
+        // }
         
-        return view('posts.show' , ['post' => $singlepostFromDB]);
+
+        return view('posts.show' , ['post' => $post]);
     }
 
 
