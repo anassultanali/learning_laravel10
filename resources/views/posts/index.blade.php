@@ -30,20 +30,21 @@ Index
                     </tr>
                   </thead>
                   <tbody>
-  
+
+                
                       @foreach ($posts as $post )
                       
                       <tr>
-                      <th scope="row">{{$post['id']}}</th>
+                      <th scope="row">{{$post->id}}</th>
                       <td>{{$post['title']}}</td>
                       <td>{{$post['postBy']}}</td>
                       <td>{{$post['createdAt']}}</td>
                       <td>
                         
 
-                          <a class="btn btn-secondary " href='{{route('posts.show' , $post['id'])}}'>Read</a>
-                          <a class="btn btn-primary " href="{{route('posts.edit' ,$post['id'])}}">Edit</a>
-                          <form style="display: inline" action="{{route('posts.destoy', $post['id'])}}" method="post">
+                          <a class="btn btn-secondary " href='{{route('posts.show' , $post->id)}}'>Read</a>
+                          <a class="btn btn-primary " href="{{route('posts.edit' ,$post->id)}}">Edit</a>
+                          <form style="display: inline" action="{{route('posts.destoy', $post->id)}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button  type="submit" class="btn btn-danger">Delete</button>
