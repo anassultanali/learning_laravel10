@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\User;
+
 
 class PostController extends Controller
 {
@@ -14,7 +16,7 @@ class PostController extends Controller
     }
     function show(Post $post) {
         // $singlepostFromDB = Post::find($postId);
-
+        
 
         // if(is_null($singlepostFromDB)){
         //     to_route('posts.index');
@@ -27,15 +29,38 @@ class PostController extends Controller
 
     // Create and Store Methods--------
     function create() {
+
+        $users = User::all();
         
         
-        return view('posts.create');
+        return view('posts.create' , ['users' => $users ]);
     }
     
     function store() {
         //step 1 -----> get data 
-        $data = request()->all() ;
+        $title = request()->title;
+        $description = request()->description;
+        $content = request()->content ;
 
+// ------------------------------------------- 1
+        // create obj of the model
+        // $post = new Post ;
+
+        // $post->title = $title ;
+        // $post->description = $description;
+        // $post->content = $content ;
+        
+        // insert the data to the DB
+        // $post->save();
+
+
+// -------------------------------------------2
+
+        Post::create([
+            'title' => $title,
+            'description' => $description,
+            'content' => $content
+        ]);
 
         return to_route('posts.index'); //step 3 ---> Redirct to posts.index
     }

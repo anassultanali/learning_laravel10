@@ -29,7 +29,7 @@
     </nav>
 
 
-    <div class="container m-4">
+    <div class="container">
     @yield('content')
     </div>
 

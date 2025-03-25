@@ -13,8 +13,8 @@
         <label for="floatingInput">The title</label>
     </div> 
     <div class="form-floating mb-3">
-        <input name="discrption" type="text" class="form-control" id="floatingInput" placeholder="Discrption" required>
-        <label for="floatingInput">The Discrption</label>
+        <input name="description" type="text" class="form-control" id="floatingInput" placeholder="Description" required>
+        <label for="floatingInput">The Description</label>
     </div>    
     <div class="mb-3">  
         <div class="form-floating">
@@ -25,9 +25,11 @@
     <div class="form-floating">
         <select name="postBy" class="form-select" id="floatingSelect" aria-label="Floating label select example">
           <option selected>Posted By</option>
-          <option value="1">Anas</option>
-          <option value="2">Osama</option>
-          <option value="3">yasser</option>
+          @foreach ($users as $user )
+          
+          <option value="{{$user->id}}">{{$user->name}}</option>
+          @endforeach
+          
         </select>
         <label for="floatingSelect">Posted By</label>
       </div>
