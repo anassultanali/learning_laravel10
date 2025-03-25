@@ -18,8 +18,8 @@ Index
   
           
   
-          <div class="position-absolute top-50 start-50 translate-middle w-50 ">
-              <table class="table">
+          <div class="position-absolute top-50 start-50 translate-middle w-75 ">
+              <table class="table ">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -39,7 +39,7 @@ Index
                       <td>{{$post['title']}}</td>
                       <td>{{$post['postBy']}}</td>
                       <td>{{$post['createdAt']}}</td>
-                      <td>
+                      <td class="text-center">
                         
 
                           <a class="btn btn-secondary " href='{{route('posts.show' , $post->id)}}'>Read</a>
